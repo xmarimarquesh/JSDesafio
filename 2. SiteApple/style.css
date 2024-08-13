@@ -1,0 +1,275 @@
+@font-face {
+  font-family: 'San Francisco';
+  font-weight: 400;
+  src: url('https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'San Francisco';
+  list-style-type: none;
+}
+:root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body {
+  height: 100dvh;
+}
+
+nav {
+  width: 61.25rem;
+  & > ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: small;
+  }
+}
+
+main {
+  margin: 3.125rem auto;
+  width: 61.25rem;
+}
+
+#produto {
+  display: flex;
+  & > #opcoes-produto {
+    flex-grow: 0;
+    flex-basis: 33.33333%;
+  }
+  & > #visualizacao {
+    flex-grow: 0;
+    flex-basis: 66.66666%;
+  }
+}
+
+.link {
+  color: #0066cc;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+#opcoes-produto {
+  display: flex;
+  flex-direction: column;
+  & > h1 {
+    width: 20rem;
+    font-size: 2rem;
+  }
+}
+
+.precos {
+  margin: 0.875rem 0 0;
+  padding: 0 0 0.625rem;
+  font-size: 1.1rem;
+  & > #parcelas {
+    font-size: 0.8rem;
+    color: #0066cc;
+    display: flex;
+    & :first-child {
+      width: fit-content;
+      margin-right: 0.3rem;
+    }
+    & p {
+      width: fit-content;
+    }
+  }
+  & #a-vista {
+    font-size: 0.8rem;
+  }
+}
+
+#opcoes {
+  margin: 1.875rem 0 0;
+  & h2 {
+    font-size: 1.1rem;
+  }
+  & ul {
+    display: flex;
+    padding: 1.1rem 0 0 0;
+    & li {
+      margin: 0 0.5rem 0.5rem 0;
+      & input {
+        display: none;
+      }
+      & label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        height: 2.625rem;
+        width: 2.625rem;
+        & > img {
+          width: 2rem;
+          mix-blend-mode: color;
+        }
+      }
+      & input[type='radio']:checked + label {
+        border-radius: 50%;
+        border: 0.125rem solid #0066cc;
+      }
+    }
+  }
+}
+
+#selo-carbono {
+  display: flex;
+  align-items: center;
+  padding: 0.125rem 0 1rem 0.1875rem;
+  & img {
+    width: 1.5625rem;
+  }
+  & p {
+    font-size: 0.75rem;
+  }
+}
+
+#tamanho-caixa {
+  margin-top: 1.875rem;
+  & > div#opcoes-tamanho {
+    display: flex;
+    gap: 0.9375rem;
+    & input {
+      display: none;
+    }
+    & label {
+      flex-basis: 50%;
+      font-size: 1.1rem;
+      font-weight: bold;
+      height: 5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0.875rem 0 0;
+      border: 0.00625rem solid #797979;
+      border-radius: 0.625rem;
+      cursor: pointer;
+    }
+    & input[type='radio']:checked + label {
+      border: 0.125rem solid #0066cc;
+    }
+  }
+}
+
+#disclaimer {
+  margin-top: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.875rem;
+  & > #saiba-mais {
+    & > b {
+      margin-left: 0.2rem;
+    }
+  }
+}
+
+#info-extra {
+  padding-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  & > #info-principal {
+    margin-top: 0.875rem;
+    font-size: 0.875rem;
+  }
+
+  & > #info-secundaria {
+    font-size: 0.75rem;
+    color: #6e6e73;
+  }
+}
+
+#entrega {
+  padding: 2rem 0 0;
+  font-size: 0.875rem;
+  display: flex;
+  position: relative;
+  & > #icone {
+    position: absolute;
+    top: 2rem;
+  }
+  & #informacoes-entrega {
+    line-height: 1.3rem;
+    position: relative;
+    left: 2rem;
+    & > span {
+      font-weight: bold;
+    }
+  }
+}
+
+#comprar {
+  margin: 2.2rem 0;
+  & > #adicionar-a-sacola {
+    all: unset;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    background-color: #0071e3;
+    color: #fff;
+    border-radius: 0.625rem;
+    padding: 0.45rem;
+
+    &:hover {
+      background-color: #057bf1;
+    }
+  }
+}
+
+#comprar-depois {
+  padding: 1.5rem 0 0;
+  & > span {
+    font-weight: bold;
+  }
+  & p {
+    margin: 0 1.25rem 0 0;
+  }
+  & p:has(> svg) {
+    display: flex;
+    align-items: start;
+    gap: 0.5rem;
+    padding: 0.5rem 0 0;
+  }
+}
+
+#visualizacao {
+  margin: 0 0 0 5rem;
+}
+
+#selecionar-imagem {
+  display: flex;
+  justify-content: center;
+  & li {
+    padding: 0 1rem 0 0;
+    & input {
+      display: none;
+    }
+    & label > img {
+      width: 2.875rem;
+      padding: 0.25rem;
+      padding-bottom: 0.5rem;
+      cursor: pointer;
+      border-bottom: 0.125rem solid hsla(0, 0%, 100%, 0);
+      &:hover {
+        border-color: #e8e8ed;
+      }
+    }
+    & input[type='radio']:checked + label > img {
+      border-color: #d2d2d6;
+    }
+  }
+}
+
+.caixa-pequena {
+  transform: scale(0.9);
+}
